@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KinBird — Flight KU671 Live Tracker</title>
+<title>KinBird · Flight KU671 Live Tracker</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -74,7 +74,7 @@ body{background:var(--bg);color:var(--text);font-family:-apple-system,'SF Pro Te
 .tz-card.arr .tz-time{color:var(--green)}
 
 /* CONTAINER */
-.container{max-width:1280px;margin:0 auto;padding:40px}
+.container{max-width:1366px;margin:0 auto;padding:40px}
 
 /* SECTION */
 .sec-label{font-family:'SF Mono',ui-monospace,monospace;font-size:10px;text-transform:uppercase;letter-spacing:2px;color:var(--muted);margin-bottom:16px;display:flex;align-items:center;gap:10px}
@@ -178,6 +178,30 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 .contact-name{font-size:13px;font-weight:600;color:var(--text)}
 .contact-role{font-size:11px;color:var(--muted)}
 .contact-num{font-family:'SF Mono',ui-monospace,monospace;font-size:11px;color:var(--blue);margin-top:2px}
+
+@media (max-width:768px){
+ .container{padding:16px}
+ .clocks-bar{padding:8px 12px;flex-wrap:wrap;gap:8px}
+ .clock-group{gap:14px;flex-wrap:wrap;justify-content:center;width:100%}
+ .logo-bar{display:none}
+ .hero{padding:30px 16px 22px}
+ .hero-title{font-size:30px;letter-spacing:-1px}
+ .countdown-wrap{display:flex;width:100%}
+ .cd-block{padding:14px 0;flex:1}
+ .cd-num{font-size:28px;letter-spacing:-1px}
+ .flight-strip{flex-direction:column;gap:14px;padding:18px 16px}
+ .tz-grid{grid-template-columns:repeat(2,1fr)}
+ .metrics{grid-template-columns:repeat(2,1fr)}
+ .doc-grid{grid-template-columns:1fr}
+ .weather-strip{grid-template-columns:1fr}
+ .bird-grid{grid-template-columns:1fr}
+ .pc-grid{grid-template-columns:1fr !important}
+}
+@media (max-width:430px){
+ .hero-title{font-size:25px}
+ .cd-num{font-size:24px}
+ .clock-group{gap:10px}
+}
 </style>
 </head>
 <body>
@@ -296,7 +320,31 @@ tr:hover td{background:rgba(255,255,255,0.02)}
     <span style="display:block;margin-top:4px;color:var(--sub)"><!--LIVE_UPDATED-->Updated 10:03 Kuwait, 21 Jun 2026.<!--/LIVE_UPDATED--> Source: FlightAware KAC671 (auto-refreshed every 10 min).</span>
   </div>
 </div>
-<style>@keyframes lpulse{0%{box-shadow:0 0 0 0 rgba(74,158,255,.55)}70%{box-shadow:0 0 0 7px rgba(74,158,255,0)}100%{box-shadow:0 0 0 0 rgba(74,158,255,0)}}</style>
+<style>@keyframes lpulse{0%{box-shadow:0 0 0 0 rgba(74,158,255,.55)}70%{box-shadow:0 0 0 7px rgba(74,158,255,0)}100%{box-shadow:0 0 0 0 rgba(74,158,255,0)}}
+@media (max-width:768px){
+ .container{padding:16px}
+ .clocks-bar{padding:8px 12px;flex-wrap:wrap;gap:8px}
+ .clock-group{gap:14px;flex-wrap:wrap;justify-content:center;width:100%}
+ .logo-bar{display:none}
+ .hero{padding:30px 16px 22px}
+ .hero-title{font-size:30px;letter-spacing:-1px}
+ .countdown-wrap{display:flex;width:100%}
+ .cd-block{padding:14px 0;flex:1}
+ .cd-num{font-size:28px;letter-spacing:-1px}
+ .flight-strip{flex-direction:column;gap:14px;padding:18px 16px}
+ .tz-grid{grid-template-columns:repeat(2,1fr)}
+ .metrics{grid-template-columns:repeat(2,1fr)}
+ .doc-grid{grid-template-columns:1fr}
+ .weather-strip{grid-template-columns:1fr}
+ .bird-grid{grid-template-columns:1fr}
+ .pc-grid{grid-template-columns:1fr !important}
+}
+@media (max-width:430px){
+ .hero-title{font-size:25px}
+ .cd-num{font-size:24px}
+ .clock-group{gap:10px}
+}
+</style>
 
 <!-- TIME ZONES -->
 <div class="tz-grid">
@@ -349,7 +397,7 @@ tr:hover td{background:rgba(255,255,255,0.02)}
   <div class="metric m-blue">
     <div class="m-label">Amount Paid</div>
     <div class="m-val">1.125M</div>
-    <div class="m-sub">PKR — May 19</div>
+    <div class="m-sub">PKR · May 19</div>
   </div>
   <div class="metric m-purple">
     <div class="m-label">CITES Valid</div>
@@ -365,18 +413,18 @@ tr:hover td{background:rgba(255,255,255,0.02)}
   <div class="sec-label">🌡️ June 21 Weather</div>
   <div class="weather-strip">
     <div class="weather-card">
-      <div class="w-city">🇰🇼 Kuwait — Departure 09:10 AM</div>
+      <div class="w-city">🇰🇼 Kuwait · Departure 09:10 AM</div>
       <div class="w-event">Loading cargo at airport</div>
-      <div class="w-temp w-hot">41°C</div>
-      <div class="w-detail">☀️ Sunny · Humidity 18% · 0% rain</div>
-      <div class="w-warning w-warn-red">🚨 EXTREME — Birds need AC cargo hold. Zero tarmac exposure.</div>
+      <div class="w-temp w-hot"><!--WX_KW_TEMP-->42°C<!--/WX_KW_TEMP--></div>
+      <div class="w-detail"><!--WX_KW_DETAIL-->🌫️ Dust storm · Humidity 8% · 0% rain<!--/WX_KW_DETAIL--></div>
+      <div class="w-warning w-warn-red">🚨 EXTREME: dust storm + heat. AC cargo hold only, zero tarmac exposure.</div>
     </div>
     <div class="weather-card">
-      <div class="w-city">🇦🇪 Dubai — Arrival 12:05 PM</div>
+      <div class="w-city">🇦🇪 Dubai · Arrival 12:05 PM</div>
       <div class="w-event">Cargo pickup by Mandarin</div>
-      <div class="w-temp w-warm">33°C</div>
-      <div class="w-detail">☀️ Sunny · Humidity 55% · 0% rain</div>
-      <div class="w-warning w-warn-orange">⚠️ HIGH — Mandarin must be at cargo by 11:30 AM sharp.</div>
+      <div class="w-temp w-warm"><!--WX_DXB_TEMP-->38°C<!--/WX_DXB_TEMP--></div>
+      <div class="w-detail"><!--WX_DXB_DETAIL-->☀️ Sunny · Humidity 24% · 0% rain<!--/WX_DXB_DETAIL--></div>
+      <div class="w-warning w-warn-orange">⚠️ HIGH · Mandarin must be at cargo by 11:30 AM sharp.</div>
     </div>
   </div>
 </div>
@@ -385,19 +433,19 @@ tr:hover td{background:rgba(255,255,255,0.02)}
   <div class="sec-label">🚨 Status & Alerts</div>
   <div class="alert a-green">
     <div class="a-icon">✅</div>
-    <div class="a-text"><strong>Flight Confirmed — KU671 21 June 09:10 AM</strong><span>Air Waybill 229-1799 1260 issued by Osoul International Cargo</span></div>
+    <div class="a-text"><strong>Flight Confirmed · KU671 21 June 09:10 AM</strong><span>Air Waybill 229-1799 1260 issued by Osoul International Cargo</span></div>
   </div>
   <div class="alert a-green">
     <div class="a-icon">✅</div>
-    <div class="a-text"><strong>UAE CITES 26AE6651 — Approved 18 June</strong><span>MOCCAE Abu Dhabi. Valid until 17/06/2027. 36 birds approved.</span></div>
+    <div class="a-text"><strong>UAE CITES 26AE6651 · Approved 18 June</strong><span>MOCCAE Abu Dhabi. Valid until 17/06/2027. 36 birds approved.</span></div>
   </div>
   <div class="alert a-green">
     <div class="a-icon">✅</div>
-    <div class="a-text"><strong>Bird count within permit — 35 of 36 approved</strong><span>Shipping 35, permit allows 36. UAE customs fine ✅</span></div>
+    <div class="a-text"><strong>Bird count within permit · 35 of 36 approved</strong><span>Shipping 35, permit allows 36. UAE customs fine ✅</span></div>
   </div>
   <div class="alert a-orange">
     <div class="a-icon">⚠️</div>
-    <div class="a-text"><strong>Temperature 41°C at Kuwait loading</strong><span>Confirm AC cargo hold with Aqeel before departure.</span></div>
+    <div class="a-text"><strong>Temperature 42°C at Kuwait loading</strong><span>Confirm AC cargo hold with Aqeel before departure.</span></div>
   </div>
   <div class="alert a-blue">
     <div class="a-icon">📞</div>
@@ -411,14 +459,14 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 <div class="sec-label">📅 Full Timeline</div>
 <div class="card">
   <div class="timeline">
-    <div class="tl-item done"><div class="tl-dot"></div><div class="tl-date">May 19, 2026</div><div class="tl-text">Birds handed to Aqeel — 1,125,000 PKR paid</div></div>
+    <div class="tl-item done"><div class="tl-dot"></div><div class="tl-date">May 19, 2026</div><div class="tl-text">Birds handed to Aqeel · 1,125,000 PKR paid</div></div>
     <div class="tl-item done"><div class="tl-dot"></div><div class="tl-date">May 23, 2026</div><div class="tl-text">Birds arrived Kuwait. 1 died in transit.</div></div>
-    <div class="tl-item warn"><div class="tl-dot"></div><div class="tl-date">May 23 – Jun 3</div><div class="tl-text">CITES papers rejected 3x — ring number issue (UAE rule since 2018)</div></div>
-    <div class="tl-item bad"><div class="tl-dot"></div><div class="tl-date">Jun 3, 2026</div><div class="tl-text">Kuwait airport bombed — Iranian drone hit T1. All foreign flights suspended.</div></div>
+    <div class="tl-item warn"><div class="tl-dot"></div><div class="tl-date">May 23 – Jun 3</div><div class="tl-text">CITES papers rejected 3x · ring number issue (UAE rule since 2018)</div></div>
+    <div class="tl-item bad"><div class="tl-dot"></div><div class="tl-date">Jun 3, 2026</div><div class="tl-text">Kuwait airport bombed · Iranian drone hit T1. All foreign flights suspended.</div></div>
     <div class="tl-item done"><div class="tl-dot"></div><div class="tl-date">Jun 6, 2026</div><div class="tl-text">Kuwait CITES 26-KW-133 issued. New rings installed on all birds.</div></div>
-    <div class="tl-item done"><div class="tl-dot"></div><div class="tl-date">Jun 18, 2026</div><div class="tl-text">UAE MOCCAE approved — Certificate 26AE6651 issued. AWB booked same day.</div></div>
-    <div class="tl-item now"><div class="tl-dot"></div><div class="tl-date">Jun 20, 2026 — TODAY</div><div class="tl-text">Birds at Kuwait cargo. Flight tomorrow 09:10 AM.</div></div>
-    <div class="tl-item next"><div class="tl-dot"></div><div class="tl-date">Jun 21, 2026 — TOMORROW</div><div class="tl-text">✈️ KU671 departs 09:10 AM · 🛬 Lands Dubai 12:05 PM</div></div>
+    <div class="tl-item done"><div class="tl-dot"></div><div class="tl-date">Jun 18, 2026</div><div class="tl-text">UAE MOCCAE approved · Certificate 26AE6651 issued. AWB booked same day.</div></div>
+    <div class="tl-item now"><div class="tl-dot"></div><div class="tl-date">Jun 20, 2026 · TODAY</div><div class="tl-text">Birds at Kuwait cargo. Flight tomorrow 09:10 AM.</div></div>
+    <div class="tl-item next"><div class="tl-dot"></div><div class="tl-date">Jun 21, 2026 · TOMORROW</div><div class="tl-text">✈️ KU671 departs 09:10 AM · 🛬 Lands Dubai 12:05 PM</div></div>
   </div>
 </div>
 
@@ -460,9 +508,9 @@ tr:hover td{background:rgba(255,255,255,0.02)}
   </div>
 </div>
 
-<!-- BIRDS — FULL WIDTH -->
+<!-- BIRDS · FULL WIDTH -->
 <div class="sec-label">🦜 Bird Status</div>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px">
+<div class="pc-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px">
 
   <div style="background:var(--s1);border:1px solid var(--b);border-radius:12px;padding:20px;overflow:auto">
     <div style="font-family:'SF Mono',ui-monospace,monospace;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--b);display:flex;justify-content:space-between;align-items:center">
@@ -769,8 +817,8 @@ tr:hover td{background:rgba(255,255,255,0.02)}
   </div>
 </div>
 
-<!-- PERMITS + CONTACTS — SIDE BY SIDE AT BOTTOM -->
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px">
+<!-- PERMITS + CONTACTS · SIDE BY SIDE AT BOTTOM -->
+<div class="pc-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px">
 
   <!-- KEY PERMITS -->
   <div>
@@ -803,7 +851,7 @@ tr:hover td{background:rgba(255,255,255,0.02)}
     </div>
     <div class="contact-card">
       <div class="contact-avatar">🇦🇪</div>
-      <div><div class="contact-name">Rizwan — Mandarin Animal Trade</div><div class="contact-role">UAE Importer · Al Bawadi Market Shop 142 · Al Ain, Abu Dhabi</div><div class="contact-num">+971 56 509 3999 · rudwanjaaa@gmail.com</div></div>
+      <div><div class="contact-name">Rizwan · Mandarin Animal Trade</div><div class="contact-role">UAE Importer · Al Bawadi Market Shop 142 · Al Ain, Abu Dhabi</div><div class="contact-num">+971 56 509 3999 · rudwanjaaa@gmail.com</div></div>
     </div>
     <div class="contact-card">
       <div class="contact-avatar">📦</div>
@@ -825,9 +873,9 @@ tr:hover td{background:rgba(255,255,255,0.02)}
 
 <!-- FOOTER -->
 <div class="footer">
-  <span>🦜 KinBird Aviary — Ayaan Ahmed Shohan</span>
+  <span>🦜 KinBird Aviary · Ayaan Ahmed Shohan</span>
   <span>Flight KU671 · 21 June 2026 · 35 Birds · Kuwait → Dubai</span>
-  <span id="footer-time">Updated —</span>
+  <span id="footer-time">Updated ·</span>
 </div>
 
 <script>
@@ -875,7 +923,7 @@ function updateCountdown(){
       document.getElementById('cd-mins').textContent=pad(Math.floor((s%3600)/60));
       document.getElementById('cd-secs').textContent=pad(s%60);
       badge.className='status-badge status-live';
-      badge.textContent='✈️ In Flight — Landing Soon';
+      badge.textContent='✈️ In Flight · Landing Soon';
     }
     return;
   }
@@ -886,7 +934,7 @@ function updateCountdown(){
   document.getElementById('cd-mins').textContent=pad(Math.floor((s%3600)/60));
   document.getElementById('cd-secs').textContent=pad(s%60);
   badge.className='status-badge status-wait';
-  badge.textContent='⏳ Awaiting Departure — KU671';
+  badge.textContent='⏳ Awaiting Departure · KU671';
 }
 
 setInterval(()=>{updateClocks();updateCountdown();},1000);
